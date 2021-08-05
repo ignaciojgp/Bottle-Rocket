@@ -38,6 +38,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Lunch Tyme" id="MXV-W2-ecb"/>
+                    <connections>
+                        <segue destination="a5f-rn-lzd" kind="show" identifier="DetailSegue" id="15I-Md-Mz0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wPn-i8-xmt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -46,14 +49,16 @@
         <!--Lunch Tyme-->
         <scene sceneID="kV8-XO-u5q">
             <objects>
-                <viewController id="a5f-rn-lzd" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="O7i-FK-iee">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="a5f-rn-lzd" customClass="LunchDetailViewController" customModule="BottleRocketTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O7i-FK-iee" customClass="LunchDetailView" customModule="BottleRocketTest" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="HuB-v7-gwb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Lunch Tyme" id="sXs-wi-5nw"/>
+                    <navigationItem key="navigationItem" title="Lunch Tyme" leftItemsSupplementBackButton="YES" id="sXs-wi-5nw">
+                        <barButtonItem key="backBarButtonItem" title="as" id="kVE-IN-uqg"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xTc-8n-uso" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,6 +72,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5L1-gg-auW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.2627450980392157" green="0.90980392156862744" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

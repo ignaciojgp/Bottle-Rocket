@@ -96,8 +96,8 @@ class LunchTableViewCell: UITableViewCell {
     
     
     private func configure(){
-        titleLbl.text = viewModel?.title
-        subTitleLbl.text = viewModel?.subtitle
+        titleLbl.text = viewModel?.name
+        subTitleLbl.text = viewModel?.category
         descriptionImage.image = viewModel?.image
     }
 }

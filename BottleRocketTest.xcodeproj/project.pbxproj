@@ -22,7 +22,10 @@
 		668CB73B26B9E9E500A4771F /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CB73A26B9E9E500A4771F /* Restaurant.swift */; };
 		668CB73D26B9F61700A4771F /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CB73C26B9F61700A4771F /* APIResponse.swift */; };
 		668CB74026B9F9CA00A4771F /* LunchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CB73F26B9F9CA00A4771F /* LunchListViewModel.swift */; };
-		668CB74226BA0F2000A4771F /* LunchTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CB74126BA0F2000A4771F /* LunchTableCellViewModel.swift */; };
+		668CB74426BADCF400A4771F /* LunchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CB74326BADCF400A4771F /* LunchDetailView.swift */; };
+		668CB74726BADF5800A4771F /* UIFont+styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CB74626BADF5800A4771F /* UIFont+styles.swift */; };
+		668CB74C26BB351400A4771F /* LunchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CB74B26BB351400A4771F /* LunchDetailViewController.swift */; };
+		668CB74E26BB4C6C00A4771F /* LunchDetailDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CB74D26BB4C6C00A4771F /* LunchDetailDataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +67,10 @@
 		668CB73A26B9E9E500A4771F /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		668CB73C26B9F61700A4771F /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		668CB73F26B9F9CA00A4771F /* LunchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchListViewModel.swift; sourceTree = "<group>"; };
-		668CB74126BA0F2000A4771F /* LunchTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchTableCellViewModel.swift; sourceTree = "<group>"; };
+		668CB74326BADCF400A4771F /* LunchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchDetailView.swift; sourceTree = "<group>"; };
+		668CB74626BADF5800A4771F /* UIFont+styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+styles.swift"; sourceTree = "<group>"; };
+		668CB74B26BB351400A4771F /* LunchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchDetailViewController.swift; sourceTree = "<group>"; };
+		668CB74D26BB4C6C00A4771F /* LunchDetailDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchDetailDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +121,11 @@
 		6637707026B9DABF0002429C /* BottleRocketTest */ = {
 			isa = PBXGroup;
 			children = (
+				668CB74526BADF0C00A4771F /* extensions */,
+				668CB73126B9E1C900A4771F /* Views */,
 				668CB73E26B9F9A600A4771F /* ViewModels */,
 				668CB73926B9E9C600A4771F /* entities */,
 				668CB73426B9E72D00A4771F /* services */,
-				668CB73126B9E1C900A4771F /* Views */,
 				668CB72E26B9E05700A4771F /* ViewControllers */,
 				6637707126B9DABF0002429C /* AppDelegate.swift */,
 				6637707326B9DABF0002429C /* SceneDelegate.swift */,
@@ -153,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				668CB72F26B9E08100A4771F /* LunchListTableViewController.swift */,
+				668CB74B26BB351400A4771F /* LunchDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -161,6 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				668CB73226B9E1E300A4771F /* LunchTableViewCell.swift */,
+				668CB74326BADCF400A4771F /* LunchDetailView.swift */,
+				668CB74D26BB4C6C00A4771F /* LunchDetailDataView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,9 +197,16 @@
 			isa = PBXGroup;
 			children = (
 				668CB73F26B9F9CA00A4771F /* LunchListViewModel.swift */,
-				668CB74126BA0F2000A4771F /* LunchTableCellViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		668CB74526BADF0C00A4771F /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				668CB74626BADF5800A4771F /* UIFont+styles.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,16 +339,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				668CB74726BADF5800A4771F /* UIFont+styles.swift in Sources */,
 				6637707626B9DABF0002429C /* ViewController.swift in Sources */,
 				6637707226B9DABF0002429C /* AppDelegate.swift in Sources */,
 				668CB73026B9E08100A4771F /* LunchListTableViewController.swift in Sources */,
 				668CB73326B9E1E300A4771F /* LunchTableViewCell.swift in Sources */,
 				668CB73B26B9E9E500A4771F /* Restaurant.swift in Sources */,
 				668CB73626B9E74100A4771F /* NetworkService.swift in Sources */,
-				668CB74226BA0F2000A4771F /* LunchTableCellViewModel.swift in Sources */,
+				668CB74C26BB351400A4771F /* LunchDetailViewController.swift in Sources */,
 				6637707426B9DABF0002429C /* SceneDelegate.swift in Sources */,
+				668CB74426BADCF400A4771F /* LunchDetailView.swift in Sources */,
 				668CB74026B9F9CA00A4771F /* LunchListViewModel.swift in Sources */,
 				668CB73826B9E93200A4771F /* RemoteRepository.swift in Sources */,
+				668CB74E26BB4C6C00A4771F /* LunchDetailDataView.swift in Sources */,
 				668CB73D26B9F61700A4771F /* APIResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

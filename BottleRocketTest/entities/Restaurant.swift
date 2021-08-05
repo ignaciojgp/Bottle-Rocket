@@ -12,13 +12,14 @@ struct Restaurant: Codable {
     var backgroundImageURL:String
     var category:String
     var contact: Contact?
-    var location: Location?
+    var location: Location
 }
 
 struct Contact:Codable{
     var phone:String
     var formattedPhone:String
     var twitter:String?
+    var facebookUsername:String?
 }
 
 struct Location: Codable{
