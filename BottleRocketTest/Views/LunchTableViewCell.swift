@@ -71,6 +71,7 @@ class LunchTableViewCell: UITableViewCell {
         
         titleLbl.text = "title"
         subTitleLbl.text = "title"
+        clipsToBounds = true
 
         NSLayoutConstraint.activate([
             

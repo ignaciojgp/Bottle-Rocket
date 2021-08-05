@@ -98,6 +98,17 @@ class LunchListViewModel: NSObject {
         )
     }
     
+    func getMapViewModel()->[MapViewViewModelItem]?{
+        
+        guard let _res = original_restaurants else {
+            return nil
+        }
+        
+        return _res.map { restaurant in
+            return .init(name: restaurant.name, location_long: restaurant.location.lng, location_lat: restaurant.location.lat)
+        }
+    }
+    
 }
 
 
@@ -117,5 +128,14 @@ struct LunchDetailViewViewModel{
     var location_long:Double
     var location_lat:Double
     var data:[String]
+
+}
+
+struct MapViewViewModelItem{
+
+    var name:String
+    var location_long:Double
+    var location_lat:Double
+    
 
 }

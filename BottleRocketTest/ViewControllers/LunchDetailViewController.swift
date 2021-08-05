@@ -9,7 +9,7 @@ import UIKit
 
 class LunchDetailViewController: UIViewController {
     
-    public var viewmodel: LunchDetailViewViewModel?
+    public var viewModel: LunchDetailViewViewModel?
     
     override func viewDidLoad() {
 
@@ -20,7 +20,7 @@ class LunchDetailViewController: UIViewController {
     private func configure(){
         
         guard let detailView = self.view as? LunchDetailView else {return}
-        detailView.viewmodel = self.viewmodel
+        detailView.viewmodel = self.viewModel
         
     }
      

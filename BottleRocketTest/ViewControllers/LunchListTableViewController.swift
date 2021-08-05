@@ -49,7 +49,12 @@ class LunchListTableViewController: UITableViewController {
         tableView.register(LunchTableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.backgroundView = indicatorView
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-
+        
+        let mapsItem = UIBarButtonItem(image: UIImage(named: "icon_map"), style: .plain, target: self, action: #selector(didTapMap))
+        
+        navigationItem.setRightBarButton(mapsItem, animated: true)
+        
+        
     }
     
     private func initViewModel(){
@@ -57,6 +62,10 @@ class LunchListTableViewController: UITableViewController {
         viewModel.load(vc: self)
     }
 
+    
+    @objc private func didTapMap(){
+        performSegue(withIdentifier: "showMap", sender: self)
+    }
 
 }
 
@@ -97,16 +106,15 @@ extension LunchListTableViewController{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        guard let index = sender as? IndexPath else {return}
-        
-        
-        
-        
-        guard let vc = segue.destination as? LunchDetailViewController else{return}
-        
-        
-        
-        vc.viewmodel = viewModel.getViewModelAtPos(pos: index.row)
+        switch segue.identifier {
+        case "DetailSegue":
+            guard let index = sender as? IndexPath else {return}
+            guard let vc = segue.destination as? LunchDetailViewController else{return}
+            vc.viewModel = viewModel.getViewModelAtPos(pos: index.row)
+        default:
+            guard let vc = segue.destination as? MapViewController else{return}
+            vc.viewModel = viewModel
+        }
         
     }
 }
