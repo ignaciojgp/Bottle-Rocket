@@ -11,24 +11,31 @@ import UIKit
 
 class MasterViewController: UIViewController {
     
+    //MARK: - Properties
+    
     enum Section {
         case main
     }
     
     let collectionList:UICollectionView = {
-        let configuration = UICollectionLayoutListConfiguration(appearance: .plain)
+        let configuration = UICollectionLayoutListConfiguration(appearance: .sidebar)
         return UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewCompositionalLayout.list(using: configuration))
     }()
-
+    
     var dataSource: UICollectionViewDiffableDataSource<Section, String>!
-
+    
     var snapshot: NSDiffableDataSourceSnapshot<Section, String>!
-
+    
+    
+    //MARK: - Init
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
     }
-
+    
+    //MARK: - Private methods
+    
     private func setup(){
         collectionList.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(collectionList)
@@ -56,14 +63,17 @@ class MasterViewController: UIViewController {
     }
     
     private func categoryCellregistration() ->
-      UICollectionView.CellRegistration<UICollectionViewListCell, String> {
+    UICollectionView.CellRegistration<UICollectionViewListCell, String> {
         
         return .init { cell, _, item in
-          var configuration = cell.defaultContentConfiguration()
-          configuration.text = item
-        cell.contentConfiguration = configuration
+            var configuration = cell.defaultContentConfiguration()
+            configuration.text = item
             
-      }
+            cell.tintColor = UIColor.darkGray
+            cell.contentConfiguration = configuration
+            
+            
+        }
     }
     
 }
@@ -71,7 +81,7 @@ class MasterViewController: UIViewController {
 //MARK: - UICollectionViewDelegate
 
 extension MasterViewController: UICollectionViewDelegate{
-
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if(indexPath.row == 0){
             performSegue(withIdentifier: "ShowLunch", sender: indexPath)
@@ -79,5 +89,5 @@ extension MasterViewController: UICollectionViewDelegate{
             performSegue(withIdentifier: "ShowWeb", sender: indexPath)
         }
     }
-
+    
 }

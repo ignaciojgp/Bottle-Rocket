@@ -11,7 +11,8 @@ import WebKit
 class InternetsViewController: UIViewController {
     
     
-    
+    //MARK: - Properties
+
     private let webview: WKWebView = {
         let view = WKWebView(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -25,6 +26,8 @@ class InternetsViewController: UIViewController {
         setup()
     }
     
+    //MARK: - Private methods
+
     private func setup(){
         view.addSubview(webview)
         
@@ -44,7 +47,6 @@ class InternetsViewController: UIViewController {
             webview.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             
         ])
-        
         
     }
     

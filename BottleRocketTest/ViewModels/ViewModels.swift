@@ -11,15 +11,18 @@ import UIKit
 
 class LunchListViewModel: NSObject {
     
-    enum State{
-        case LOADING
-        case LOADED
-        case WITH_ERROR
+    
+    var restaurants:[LunchTableCellViewModel]?{
+        get{
+            return original_restaurants?.map({ Restaurant in
+                .init(name: Restaurant.name, category: Restaurant.category, url: Restaurant.backgroundImageURL)
+            })
+            
+        }
     }
     
-    var restaurants:[LunchTableCellViewModel]?
     var error:RemoteRepository.RemoteError?
-    var state:State = .LOADING
+    
     
     private var original_restaurants: [Restaurant]?
     
@@ -29,35 +32,11 @@ class LunchListViewModel: NSObject {
         RemoteRepository.shared.getRestaurants { restaurants, error in
             self.error = error
             
-            guard let _restaurants = restaurants else {
+            self.original_restaurants = restaurants
+            
+            DispatchQueue.main.async {
                 vc.update()
-                return
             }
-            
-            var stack:[LunchTableCellViewModel] = []
-            
-            for i in _restaurants{
-                
-                self.original_restaurants = _restaurants
-                
-                RemoteRepository.shared.getImage(url: i.backgroundImageURL) { image, error in
-                    stack.append(.init(name: i.name, category: i.category, image: image))
-                    
-                    if(stack.count == _restaurants.count){
-                        print("LunchListViewModel: load: all images has been loaded")
-
-                        self.restaurants = stack
-                        
-                        DispatchQueue.main.async {
-                            vc.update()
-                        }
-                        
-                    }
-                    
-                }
-                
-            }
-            
             
         }
         
@@ -74,7 +53,6 @@ class LunchListViewModel: NSObject {
         
         data.append(restaurant.location.formattedAddress.joined(separator: "\n"))
         
-        
         if let contact = restaurant.contact{
             data.append(contact.formattedPhone)
 
@@ -88,7 +66,6 @@ class LunchListViewModel: NSObject {
             
         }
         
-        
         return .init(
             name: restaurant.name,
             category: restaurant.category,
@@ -98,13 +75,9 @@ class LunchListViewModel: NSObject {
         )
     }
     
+    ///Return a list of MapViewModelItems
     func getMapViewModel()->[MapViewViewModelItem]?{
-        
-        guard let _res = original_restaurants else {
-            return nil
-        }
-        
-        return _res.map { restaurant in
+        return original_restaurants?.map { restaurant in
             return .init(name: restaurant.name, location_long: restaurant.location.lng, location_lat: restaurant.location.lat)
         }
     }
@@ -113,11 +86,11 @@ class LunchListViewModel: NSObject {
 
 
 
-struct LunchTableCellViewModel {
+struct LunchTableCellViewModel: Hashable {
     
     var name:String
     var category:String
-    var image:UIImage?
+    var url:String
     
 }
 

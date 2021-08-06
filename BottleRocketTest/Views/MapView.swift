@@ -19,8 +19,7 @@ class MapView: UIView {
         }
     }
     
-    
-    private let mapView:MKMapView = {
+     private let mapView:MKMapView = {
         let view = MKMapView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -86,24 +85,26 @@ class MapView: UIView {
             maxLng = maxLng == nil ? i.location_long : max(maxLng!, i.location_long)
 
             let anotation = MKPointAnnotation()
+            anotation.title = i.name
             anotation.coordinate = CLLocationCoordinate2D(latitude: i.location_lat, longitude: i.location_long)
             mapView.addAnnotation(anotation)
             
         }
         
-        let lat = (maxLat! - minLat!) / 2 + minLat!
-        let lng = (maxLng! - minLng!) / 2 + minLng!
-
+        guard let _minLat = minLat, let _minLng = minLng, let _maxLat = maxLat, let _maxLng = maxLng else{return}
+        
+        
+        let lat = (_maxLat + _minLat) / 2
+        let lng = (_maxLng + _minLng) / 2
         
         let center = CLLocationCoordinate2D(latitude: lat, longitude: lng)
         
-        let leftTopCorner = CLLocation(latitude: minLat!, longitude: minLng!)
-        let rightBottomCorner = CLLocation(latitude: maxLat!, longitude: maxLng!)
+        let leftTopCorner = CLLocation(latitude: _minLat, longitude: _minLng)
+        let rightBottomCorner = CLLocation(latitude: _maxLat, longitude: _maxLng)
         
         let distance = leftTopCorner.distance(from: rightBottomCorner)
         
-        print(distance)
-
+        
         let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: distance*3)
         mapView.setCameraZoomRange(zoomRange, animated: true)
         mapView.setCenter(center, animated: true)

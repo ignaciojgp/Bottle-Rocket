@@ -31,13 +31,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aJG-hf-2Mw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1708" y="247"/>
+            <point key="canvasLocation" x="1820" y="1097"/>
         </scene>
         <!--Internets-->
         <scene sceneID="YNC-qa-YL3">
             <objects>
                 <viewController id="CFT-A0-xHv" customClass="InternetsViewController" customModule="BottleRocketTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RbM-ZH-Nwi" customClass="InternetsView" customModule="BottleRocketTest" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="RbM-ZH-Nwi">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1062"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Lzt-NW-PWZ"/>
@@ -48,30 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AR7-Y5-z87" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2660" y="247"/>
-        </scene>
-        <!--Lunch Tyme-->
-        <scene sceneID="dWg-Tp-3ow">
-            <objects>
-                <tableViewController id="ckr-IF-E3A" customClass="LunchListTableViewController" customModule="BottleRocketTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1M6-xo-aa8">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1062"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <connections>
-                            <outlet property="dataSource" destination="ckr-IF-E3A" id="U0n-56-Yuf"/>
-                            <outlet property="delegate" destination="ckr-IF-E3A" id="AeR-XR-VmY"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Lunch Tyme" id="MXV-W2-ecb"/>
-                    <connections>
-                        <segue destination="a5f-rn-lzd" kind="show" identifier="DetailSegue" id="15I-Md-Mz0"/>
-                        <segue destination="SJX-9N-hgW" kind="presentation" identifier="showMap" id="93w-57-qGz"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wPn-i8-xmt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2660" y="-490.70464767616198"/>
+            <point key="canvasLocation" x="2772" y="1097"/>
         </scene>
         <!--Lunch Tyme-->
         <scene sceneID="kV8-XO-u5q">
@@ -89,9 +66,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xTc-8n-uso" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3642" y="-491"/>
+            <point key="canvasLocation" x="3754" y="360"/>
         </scene>
-        <!--Lunch Detail View Controller-->
+        <!--Lunch Tyme-->
         <scene sceneID="kOX-8x-yQe">
             <objects>
                 <viewController id="iq1-Vd-mcX" customClass="LunchDetailViewController" customModule="BottleRocketTest" customModuleProvider="target" sceneMemberID="viewController">
@@ -101,7 +78,9 @@
                         <viewLayoutGuide key="safeArea" id="Zzv-o0-gTf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fEB-IU-KcD"/>
+                    <navigationItem key="navigationItem" title="Lunch Tyme" id="fEB-IU-KcD">
+                        <barButtonItem key="backBarButtonItem" title="   " id="ShX-ez-qHI"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbc-7L-CuO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,12 +101,34 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="ckr-IF-E3A" kind="relationship" relationship="rootViewController" id="Idj-8U-3bZ"/>
+                        <segue destination="hlQ-Je-z33" kind="relationship" relationship="rootViewController" id="Aqj-Md-VfO"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w9V-el-J0n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1722" y="-489"/>
+            <point key="canvasLocation" x="1834" y="362"/>
+        </scene>
+        <!--Lunch Tyme-->
+        <scene sceneID="JLc-S5-LCY">
+            <objects>
+                <viewController id="hlQ-Je-z33" customClass="LunchListTableViewController" customModule="BottleRocketTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fPc-Na-MEe" customClass="LunchListView" customModule="BottleRocketTest" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1062"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TF9-LM-pxT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lunch Tyme" id="tIq-Jw-Hpt">
+                        <barButtonItem key="backBarButtonItem" title="  " id="ag1-LN-snP"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="a5f-rn-lzd" kind="show" identifier="DetailSegue" id="59Y-1f-OR7"/>
+                        <segue destination="SJX-9N-hgW" kind="presentation" identifier="showMap" id="uPL-jX-tdT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="azW-A6-b0q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2772" y="362"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8rV-cy-ZN8">
@@ -147,40 +148,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQh-R5-ljE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="235" y="-110"/>
-        </scene>
-        <!--Lunch Tyme-->
-        <scene sceneID="kH7-XA-7gr">
-            <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="lN9-0C-niW" customClass="LunchListTableViewController" customModule="BottleRocketTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="X0T-lU-vYq">
-                        <rect key="frame" x="0.0" y="0.0" width="420" height="1112"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Z4l-zg-br7">
-                                <rect key="frame" x="0.0" y="24.5" width="420" height="150"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z4l-zg-br7" id="BdF-EY-tJr">
-                                    <rect key="frame" x="100" y="0.0" width="320" height="150"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="lN9-0C-niW" id="hZL-HA-ChM"/>
-                            <outlet property="delegate" destination="lN9-0C-niW" id="eoi-dG-ZCU"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Lunch Tyme" id="t8H-qh-9Dn"/>
-                    <connections>
-                        <segue destination="iq1-Vd-mcX" kind="showDetail" identifier="DetailSegue" id="T7d-fp-7Ul"/>
-                        <segue destination="TTT-ws-upw" kind="presentation" identifier="showMap" id="F4r-m1-G9k"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rcg-T0-mU5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1722" y="-1264"/>
+            <point key="canvasLocation" x="129" y="360"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qpS-22-yN2">
@@ -236,8 +204,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="mBX-Dn-SWE"/>
                     <connections>
-                        <segue destination="lN9-0C-niW" kind="show" identifier="ShowLunch" id="3wz-mQ-Cpi"/>
                         <segue destination="avh-hc-coT" kind="showDetail" identifier="ShowWeb" id="o71-Hn-bfr"/>
+                        <segue destination="zsZ-4S-6Iv" kind="show" identifier="ShowLunch" id="vsE-aO-GCv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vxm-jW-lhg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -285,10 +253,11 @@
                         <viewLayoutGuide key="safeArea" id="OJy-Tu-QPD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="eVL-e9-Kue"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LLV-3E-DQi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3642" y="247"/>
+            <point key="canvasLocation" x="3754" y="1097"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="2Sp-j1-xi8">
@@ -303,7 +272,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k5x-pa-J9s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3642" y="-1264"/>
+            <point key="canvasLocation" x="2660" y="-506"/>
+        </scene>
+        <!--Lunch Tyme-->
+        <scene sceneID="baH-Lp-fbi">
+            <objects>
+                <viewController id="zsZ-4S-6Iv" customClass="LunchListTableViewController" customModule="BottleRocketTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YOY-Aq-EoD" customClass="LunchListView" customModule="BottleRocketTest" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="420" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="DEC-MF-Aup"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lunch Tyme" id="N0s-TB-LaU"/>
+                    <connections>
+                        <segue destination="iq1-Vd-mcX" kind="showDetail" identifier="DetailSegue" id="DWq-QU-AXe"/>
+                        <segue destination="TTT-ws-upw" kind="presentation" identifier="showMap" id="2UI-fI-uli"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WAt-9c-JDd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1722" y="-1264"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.2627450980392157" green="0.9882352941176471" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>
