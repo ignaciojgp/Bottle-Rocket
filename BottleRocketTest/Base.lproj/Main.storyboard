@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l7k-B8-6kT">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p6u-Qp-Ko0">
+    <device id="ipad10_5" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,50 +8,54 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--internets-->
+        <scene sceneID="1Ip-yP-8nc">
+            <objects>
+                <navigationController id="HcR-se-oSR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="internets" image="tab_internets" id="12O-7H-oyK"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lhL-bO-tcT">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.26274509800000001" green="0.90980392160000001" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="CFT-A0-xHv" kind="relationship" relationship="rootViewController" id="KEV-4D-0Sd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aJG-hf-2Mw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1820" y="1097"/>
+        </scene>
         <!--Internets-->
         <scene sceneID="YNC-qa-YL3">
             <objects>
-                <viewController id="CFT-A0-xHv" sceneMemberID="viewController">
+                <viewController id="CFT-A0-xHv" customClass="InternetsViewController" customModule="BottleRocketTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RbM-ZH-Nwi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1062"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Lzt-NW-PWZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Internets" image="tab_internets" selectedImage="tab_internets" id="F4a-aG-KYr"/>
+                    <navigationItem key="navigationItem" id="rmx-9n-CdW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AR7-Y5-z87" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1722" y="210"/>
-        </scene>
-        <!--Lunch Tyme-->
-        <scene sceneID="dWg-Tp-3ow">
-            <objects>
-                <tableViewController id="ckr-IF-E3A" customClass="LunchListTableViewController" customModule="BottleRocketTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1M6-xo-aa8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <connections>
-                            <outlet property="dataSource" destination="ckr-IF-E3A" id="U0n-56-Yuf"/>
-                            <outlet property="delegate" destination="ckr-IF-E3A" id="AeR-XR-VmY"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Lunch Tyme" id="MXV-W2-ecb"/>
-                    <connections>
-                        <segue destination="a5f-rn-lzd" kind="show" identifier="DetailSegue" id="15I-Md-Mz0"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wPn-i8-xmt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2660" y="-490.70464767616198"/>
+            <point key="canvasLocation" x="2772" y="1097"/>
         </scene>
         <!--Lunch Tyme-->
         <scene sceneID="kV8-XO-u5q">
             <objects>
                 <viewController id="a5f-rn-lzd" customClass="LunchDetailViewController" customModule="BottleRocketTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O7i-FK-iee" customClass="LunchDetailView" customModule="BottleRocketTest" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1062"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="HuB-v7-gwb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -62,7 +66,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xTc-8n-uso" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3642" y="-491"/>
+            <point key="canvasLocation" x="3754" y="360"/>
+        </scene>
+        <!--Lunch Tyme-->
+        <scene sceneID="kOX-8x-yQe">
+            <objects>
+                <viewController id="iq1-Vd-mcX" customClass="LunchDetailViewController" customModule="BottleRocketTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JTg-ps-fwX" customClass="LunchDetailView" customModule="BottleRocketTest" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Zzv-o0-gTf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lunch Tyme" id="fEB-IU-KcD">
+                        <barButtonItem key="backBarButtonItem" title="   " id="ShX-ez-qHI"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nbc-7L-CuO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2660" y="-1264"/>
         </scene>
         <!--lunch-->
         <scene sceneID="IKo-er-nZB">
@@ -70,7 +92,7 @@
                 <navigationController id="IpG-4a-DQg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="lunch" image="tab_lunch" selectedImage="tab_lunch" id="3Fe-TT-IsV"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5L1-gg-auW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.2627450980392157" green="0.90980392156862744" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>
@@ -79,12 +101,34 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="ckr-IF-E3A" kind="relationship" relationship="rootViewController" id="Idj-8U-3bZ"/>
+                        <segue destination="hlQ-Je-z33" kind="relationship" relationship="rootViewController" id="Aqj-Md-VfO"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w9V-el-J0n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1722" y="-489"/>
+            <point key="canvasLocation" x="1834" y="362"/>
+        </scene>
+        <!--Lunch Tyme-->
+        <scene sceneID="JLc-S5-LCY">
+            <objects>
+                <viewController id="hlQ-Je-z33" customClass="LunchListTableViewController" customModule="BottleRocketTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fPc-Na-MEe" customClass="LunchListView" customModule="BottleRocketTest" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1062"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TF9-LM-pxT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lunch Tyme" id="tIq-Jw-Hpt">
+                        <barButtonItem key="backBarButtonItem" title="  " id="ag1-LN-snP"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="a5f-rn-lzd" kind="show" identifier="DetailSegue" id="59Y-1f-OR7"/>
+                        <segue destination="SJX-9N-hgW" kind="presentation" identifier="showMap" id="uPL-jX-tdT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="azW-A6-b0q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2772" y="362"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8rV-cy-ZN8">
@@ -99,12 +143,156 @@
                     </tabBar>
                     <connections>
                         <segue destination="IpG-4a-DQg" kind="relationship" relationship="viewControllers" id="4S9-Gs-7IZ"/>
-                        <segue destination="CFT-A0-xHv" kind="relationship" relationship="viewControllers" id="WdM-ne-0yg"/>
+                        <segue destination="HcR-se-oSR" kind="relationship" relationship="viewControllers" id="StD-N7-ICF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQh-R5-ljE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="835" y="-93"/>
+            <point key="canvasLocation" x="129" y="360"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qpS-22-yN2">
+            <objects>
+                <navigationController id="Z89-8E-z7D" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AQm-ue-eZL">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.26274509800000001" green="0.90980392160000001" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DDl-t6-jyp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="209" y="-1264"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zUh-gN-Sea">
+            <objects>
+                <navigationController id="5TL-d7-O3y" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yLP-Bp-7M8">
+                        <rect key="frame" x="0.0" y="0.0" width="420" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.26274509800000001" green="0.90980392160000001" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sPL-3w-Rg0" kind="relationship" relationship="rootViewController" id="rYr-nM-yfJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CuX-3l-Hf9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="209" y="-2044"/>
+        </scene>
+        <!--Master View Controller-->
+        <scene sceneID="XFf-2R-0YR">
+            <objects>
+                <viewController id="sPL-3w-Rg0" customClass="MasterViewController" customModule="BottleRocketTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eLt-gi-hD1">
+                        <rect key="frame" x="0.0" y="0.0" width="420" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="iqF-SB-pSc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mBX-Dn-SWE"/>
+                    <connections>
+                        <segue destination="avh-hc-coT" kind="showDetail" identifier="ShowWeb" id="o71-Hn-bfr"/>
+                        <segue destination="zsZ-4S-6Iv" kind="show" identifier="ShowLunch" id="vsE-aO-GCv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vxm-jW-lhg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1722" y="-2044"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="c8m-Yf-dqw">
+            <objects>
+                <splitViewController allowDoubleColumnStyle="YES" id="p6u-Qp-Ko0" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="l7k-B8-6kT" kind="relationship" relationship="compactViewController" id="72g-UM-2K1"/>
+                        <segue destination="Z89-8E-z7D" kind="relationship" relationship="detailViewController" id="FWm-VJ-55a"/>
+                        <segue destination="5TL-d7-O3y" kind="relationship" relationship="masterViewController" id="1ac-QM-uDn"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5bX-pE-UuA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-861" y="-1264"/>
+        </scene>
+        <!--Internets-->
+        <scene sceneID="PCo-on-lVj">
+            <objects>
+                <viewController id="avh-hc-coT" customClass="InternetsViewController" customModule="BottleRocketTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B13-Z6-Fq7">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="iHT-dr-zb9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Internets" image="tab_internets" selectedImage="tab_internets" id="KRJ-3G-X5h"/>
+                    <navigationItem key="navigationItem" id="OYE-1j-VDn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="867-xp-cuD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2683" y="-2044"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="eGu-Zi-TmI">
+            <objects>
+                <viewController id="SJX-9N-hgW" customClass="MapViewController" customModule="BottleRocketTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ORu-84-mcu" customClass="MapView" customModule="BottleRocketTest" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="OJy-Tu-QPD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eVL-e9-Kue"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LLV-3E-DQi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3754" y="1097"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="2Sp-j1-xi8">
+            <objects>
+                <viewController id="TTT-ws-upw" customClass="MapViewController" customModule="BottleRocketTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zpQ-tA-uiy" customClass="MapView" customModule="BottleRocketTest" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gf8-h9-kXt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k5x-pa-J9s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2660" y="-506"/>
+        </scene>
+        <!--Lunch Tyme-->
+        <scene sceneID="baH-Lp-fbi">
+            <objects>
+                <viewController id="zsZ-4S-6Iv" customClass="LunchListTableViewController" customModule="BottleRocketTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YOY-Aq-EoD" customClass="LunchListView" customModule="BottleRocketTest" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="420" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="DEC-MF-Aup"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lunch Tyme" id="N0s-TB-LaU"/>
+                    <connections>
+                        <segue destination="iq1-Vd-mcX" kind="showDetail" identifier="DetailSegue" id="DWq-QU-AXe"/>
+                        <segue destination="TTT-ws-upw" kind="presentation" identifier="showMap" id="2UI-fI-uli"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WAt-9c-JDd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1722" y="-1264"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.2627450980392157" green="0.9882352941176471" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>

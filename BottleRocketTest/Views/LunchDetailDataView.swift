@@ -8,12 +8,15 @@
 import UIKit
 
 class LunchDetailDataView: UITableView {
-
+    
+    //MARK: - Properties
     var data:[String]?{
         didSet{
             configure()
         }
     }
+    
+    //MARK: - Init
     
     init() {
         super.init(frame: .zero, style: .plain)
@@ -23,7 +26,9 @@ class LunchDetailDataView: UITableView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
+    //MARK: - Private Methods
+
     private func setup(){
         self.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         self.dataSource = self
@@ -36,6 +41,8 @@ class LunchDetailDataView: UITableView {
 
     }
 }
+
+//MARK: - UITableViewDataSource
 
 extension LunchDetailDataView:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

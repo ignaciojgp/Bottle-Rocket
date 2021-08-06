@@ -9,7 +9,7 @@ import UIKit
 
 
 
-class LunchTableViewCell: UITableViewCell {
+class LunchItemViewCell: UICollectionViewCell {
 
     var viewModel: LunchTableCellViewModel?{
         didSet{
@@ -47,23 +47,23 @@ class LunchTableViewCell: UITableViewCell {
         label.textColor = UIColor.white
         return label
     }()
-
+ 
     
-    //MARK: - init
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         
         setup()
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        setup()
     }
      
     //MARK: - Setup
     
     private func setup(){
-        
+        translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(descriptionImage)
         contentView.addSubview(screen)
         contentView.addSubview(titleLbl)
@@ -71,6 +71,7 @@ class LunchTableViewCell: UITableViewCell {
         
         titleLbl.text = "title"
         subTitleLbl.text = "title"
+        clipsToBounds = true
 
         NSLayoutConstraint.activate([
             
@@ -96,8 +97,24 @@ class LunchTableViewCell: UITableViewCell {
     
     
     private func configure(){
-        titleLbl.text = viewModel?.name
-        subTitleLbl.text = viewModel?.category
-        descriptionImage.image = viewModel?.image
+        
+        guard let _viewmodel = viewModel else {return}
+        
+        titleLbl.text = _viewmodel.name
+        subTitleLbl.text = _viewmodel.category
+        
+        ImageLoaderService.shared.loadImageOnView(url: _viewmodel.url, imageView: descriptionImage)
+        
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        guard let _viewModel = viewModel else {return}
+        
+        ImageLoaderService.shared.removeObserver(image: descriptionImage, for: _viewModel.url)
+        
+    }
+    
+    
 }

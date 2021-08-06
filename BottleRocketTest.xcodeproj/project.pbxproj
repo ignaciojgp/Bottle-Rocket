@@ -9,23 +9,28 @@
 /* Begin PBXBuildFile section */
 		6637707226B9DABF0002429C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6637707126B9DABF0002429C /* AppDelegate.swift */; };
 		6637707426B9DABF0002429C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6637707326B9DABF0002429C /* SceneDelegate.swift */; };
-		6637707626B9DABF0002429C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6637707526B9DABF0002429C /* ViewController.swift */; };
 		6637707926B9DABF0002429C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6637707726B9DABF0002429C /* Main.storyboard */; };
 		6637707B26B9DAC00002429C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6637707A26B9DAC00002429C /* Assets.xcassets */; };
 		6637707E26B9DAC00002429C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6637707C26B9DAC00002429C /* LaunchScreen.storyboard */; };
 		6637708926B9DAC00002429C /* BottleRocketTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6637708826B9DAC00002429C /* BottleRocketTestTests.swift */; };
 		6637709426B9DAC00002429C /* BottleRocketTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6637709326B9DAC00002429C /* BottleRocketTestUITests.swift */; };
 		668CB73026B9E08100A4771F /* LunchListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CB72F26B9E08100A4771F /* LunchListTableViewController.swift */; };
-		668CB73326B9E1E300A4771F /* LunchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CB73226B9E1E300A4771F /* LunchTableViewCell.swift */; };
+		668CB73326B9E1E300A4771F /* LunchItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CB73226B9E1E300A4771F /* LunchItemViewCell.swift */; };
 		668CB73626B9E74100A4771F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CB73526B9E74100A4771F /* NetworkService.swift */; };
 		668CB73826B9E93200A4771F /* RemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CB73726B9E93200A4771F /* RemoteRepository.swift */; };
 		668CB73B26B9E9E500A4771F /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CB73A26B9E9E500A4771F /* Restaurant.swift */; };
 		668CB73D26B9F61700A4771F /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CB73C26B9F61700A4771F /* APIResponse.swift */; };
-		668CB74026B9F9CA00A4771F /* LunchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CB73F26B9F9CA00A4771F /* LunchListViewModel.swift */; };
+		668CB74026B9F9CA00A4771F /* ViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CB73F26B9F9CA00A4771F /* ViewModels.swift */; };
 		668CB74426BADCF400A4771F /* LunchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CB74326BADCF400A4771F /* LunchDetailView.swift */; };
 		668CB74726BADF5800A4771F /* UIFont+styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CB74626BADF5800A4771F /* UIFont+styles.swift */; };
 		668CB74C26BB351400A4771F /* LunchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CB74B26BB351400A4771F /* LunchDetailViewController.swift */; };
 		668CB74E26BB4C6C00A4771F /* LunchDetailDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668CB74D26BB4C6C00A4771F /* LunchDetailDataView.swift */; };
+		66AD3E0926BBAE66006AB42C /* InternetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AD3E0826BBAE66006AB42C /* InternetsViewController.swift */; };
+		66F6873126BC286E00A35A04 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6873026BC286E00A35A04 /* MasterViewController.swift */; };
+		66F6876F26BC619B00A35A04 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6876E26BC619B00A35A04 /* MapViewController.swift */; };
+		66F6877126BC629200A35A04 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6877026BC629200A35A04 /* MapView.swift */; };
+		66F6877326BC97CC00A35A04 /* LunchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6877226BC97CC00A35A04 /* LunchListView.swift */; };
+		66F6877526BCB03900A35A04 /* ImageLoaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6877426BCB03900A35A04 /* ImageLoaderService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +54,6 @@
 		6637706E26B9DABF0002429C /* BottleRocketTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BottleRocketTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6637707126B9DABF0002429C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6637707326B9DABF0002429C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6637707526B9DABF0002429C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6637707826B9DABF0002429C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6637707A26B9DAC00002429C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6637707D26B9DAC00002429C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,16 +65,22 @@
 		6637709326B9DAC00002429C /* BottleRocketTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottleRocketTestUITests.swift; sourceTree = "<group>"; };
 		6637709526B9DAC00002429C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		668CB72F26B9E08100A4771F /* LunchListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchListTableViewController.swift; sourceTree = "<group>"; };
-		668CB73226B9E1E300A4771F /* LunchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchTableViewCell.swift; sourceTree = "<group>"; };
+		668CB73226B9E1E300A4771F /* LunchItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchItemViewCell.swift; sourceTree = "<group>"; };
 		668CB73526B9E74100A4771F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		668CB73726B9E93200A4771F /* RemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRepository.swift; sourceTree = "<group>"; };
 		668CB73A26B9E9E500A4771F /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		668CB73C26B9F61700A4771F /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
-		668CB73F26B9F9CA00A4771F /* LunchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchListViewModel.swift; sourceTree = "<group>"; };
+		668CB73F26B9F9CA00A4771F /* ViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels.swift; sourceTree = "<group>"; };
 		668CB74326BADCF400A4771F /* LunchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchDetailView.swift; sourceTree = "<group>"; };
 		668CB74626BADF5800A4771F /* UIFont+styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+styles.swift"; sourceTree = "<group>"; };
 		668CB74B26BB351400A4771F /* LunchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchDetailViewController.swift; sourceTree = "<group>"; };
 		668CB74D26BB4C6C00A4771F /* LunchDetailDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchDetailDataView.swift; sourceTree = "<group>"; };
+		66AD3E0826BBAE66006AB42C /* InternetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetsViewController.swift; sourceTree = "<group>"; };
+		66F6873026BC286E00A35A04 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		66F6876E26BC619B00A35A04 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		66F6877026BC629200A35A04 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		66F6877226BC97CC00A35A04 /* LunchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchListView.swift; sourceTree = "<group>"; };
+		66F6877426BCB03900A35A04 /* ImageLoaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +139,6 @@
 				668CB72E26B9E05700A4771F /* ViewControllers */,
 				6637707126B9DABF0002429C /* AppDelegate.swift */,
 				6637707326B9DABF0002429C /* SceneDelegate.swift */,
-				6637707526B9DABF0002429C /* ViewController.swift */,
 				6637707726B9DABF0002429C /* Main.storyboard */,
 				6637707A26B9DAC00002429C /* Assets.xcassets */,
 				6637707C26B9DAC00002429C /* LaunchScreen.storyboard */,
@@ -161,6 +170,9 @@
 			children = (
 				668CB72F26B9E08100A4771F /* LunchListTableViewController.swift */,
 				668CB74B26BB351400A4771F /* LunchDetailViewController.swift */,
+				66AD3E0826BBAE66006AB42C /* InternetsViewController.swift */,
+				66F6873026BC286E00A35A04 /* MasterViewController.swift */,
+				66F6876E26BC619B00A35A04 /* MapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -168,9 +180,11 @@
 		668CB73126B9E1C900A4771F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				668CB73226B9E1E300A4771F /* LunchTableViewCell.swift */,
+				66F6877226BC97CC00A35A04 /* LunchListView.swift */,
+				668CB73226B9E1E300A4771F /* LunchItemViewCell.swift */,
 				668CB74326BADCF400A4771F /* LunchDetailView.swift */,
 				668CB74D26BB4C6C00A4771F /* LunchDetailDataView.swift */,
+				66F6877026BC629200A35A04 /* MapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,6 +194,7 @@
 			children = (
 				668CB73526B9E74100A4771F /* NetworkService.swift */,
 				668CB73726B9E93200A4771F /* RemoteRepository.swift */,
+				66F6877426BCB03900A35A04 /* ImageLoaderService.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -196,7 +211,7 @@
 		668CB73E26B9F9A600A4771F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				668CB73F26B9F9CA00A4771F /* LunchListViewModel.swift */,
+				668CB73F26B9F9CA00A4771F /* ViewModels.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -340,16 +355,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				668CB74726BADF5800A4771F /* UIFont+styles.swift in Sources */,
-				6637707626B9DABF0002429C /* ViewController.swift in Sources */,
 				6637707226B9DABF0002429C /* AppDelegate.swift in Sources */,
 				668CB73026B9E08100A4771F /* LunchListTableViewController.swift in Sources */,
-				668CB73326B9E1E300A4771F /* LunchTableViewCell.swift in Sources */,
+				668CB73326B9E1E300A4771F /* LunchItemViewCell.swift in Sources */,
 				668CB73B26B9E9E500A4771F /* Restaurant.swift in Sources */,
 				668CB73626B9E74100A4771F /* NetworkService.swift in Sources */,
+				66F6877126BC629200A35A04 /* MapView.swift in Sources */,
 				668CB74C26BB351400A4771F /* LunchDetailViewController.swift in Sources */,
 				6637707426B9DABF0002429C /* SceneDelegate.swift in Sources */,
 				668CB74426BADCF400A4771F /* LunchDetailView.swift in Sources */,
-				668CB74026B9F9CA00A4771F /* LunchListViewModel.swift in Sources */,
+				66F6873126BC286E00A35A04 /* MasterViewController.swift in Sources */,
+				66F6877326BC97CC00A35A04 /* LunchListView.swift in Sources */,
+				668CB74026B9F9CA00A4771F /* ViewModels.swift in Sources */,
+				66F6877526BCB03900A35A04 /* ImageLoaderService.swift in Sources */,
+				66F6876F26BC619B00A35A04 /* MapViewController.swift in Sources */,
+				66AD3E0926BBAE66006AB42C /* InternetsViewController.swift in Sources */,
 				668CB73826B9E93200A4771F /* RemoteRepository.swift in Sources */,
 				668CB74E26BB4C6C00A4771F /* LunchDetailDataView.swift in Sources */,
 				668CB73D26B9F61700A4771F /* APIResponse.swift in Sources */,

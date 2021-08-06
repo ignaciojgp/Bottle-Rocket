@@ -9,18 +9,24 @@ import UIKit
 
 class LunchDetailViewController: UIViewController {
     
-    public var viewmodel: LunchDetailViewViewModel?
+    //MARK: - Properties
+
+    public var viewModel: LunchDetailViewViewModel?
     
+    //MARK: - init
+
     override func viewDidLoad() {
 
         super.viewDidLoad()
         configure()
     }
     
+    //MARK: - Private methods
+
     private func configure(){
         
         guard let detailView = self.view as? LunchDetailView else {return}
-        detailView.viewmodel = self.viewmodel
+        detailView.viewmodel = self.viewModel
         
     }
      

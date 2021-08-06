@@ -8,7 +8,6 @@
 import UIKit
 
 
-
 class NetworkService: NSObject {
     
     enum ServiceError:Error{
@@ -20,11 +19,13 @@ class NetworkService: NSObject {
     func request(url: String, handler: @escaping (Data?, ServiceError?)->Void){
         
         guard let _url = URL(string: url) else {return}
+        
         let request = URLRequest(url: _url)
 
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
             if let _error = error{
+                //Errors handling
                 if _error.localizedDescription.contains("The Internet connection appears to be offline"){
                     handler(nil, .NO_INTERNET)
                 }else{
@@ -32,16 +33,13 @@ class NetworkService: NSObject {
                 }
                 return
             }else{
-                
+                //Successful response
                 handler(data, nil)
-                
             }
-            
-            
-            
         }
         
         task.resume()
+        
         
     }
 
